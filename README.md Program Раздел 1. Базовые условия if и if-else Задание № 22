@@ -1,0 +1,22 @@
+    ﻿using System;
+    using System.Collections.Generic;
+    using System.Linq;
+    using System.Text;
+    using System.Threading.Tasks;
+
+    namespace Program22
+    {
+    internal class Program
+    {
+        static void Main()
+        {
+            Console.Write("Первое число: ");
+            if (!double.TryParse(Console.ReadLine(), out double a)) { Console.WriteLine("Ошибка."); return; }
+            Console.Write("Второе число: ");
+            if (!double.TryParse(Console.ReadLine(), out double b)) { Console.WriteLine("Ошибка."); return; }
+
+            bool equal = Math.Abs(a - b) <= 0.001;
+            Console.WriteLine(equal ? "Равны с точностью до 0.001" : "Не равны");
+        }
+    }
+    }
